@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Medical Theme - Beautiful Colors */
+body, .medical-gradient {
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 25%, #14b8a6 50%, #10b981 75%, #3b82f6 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* Pulse animation for background */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Force apply button styles */
+.test-button {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color: white !important;
+  padding: 1rem 2rem !important;
+  border-radius: 0.75rem !important;
+  border: none !important;
+  font-weight: 600 !important;
+  font-size: 1.125rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4) !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+}
+
+.test-button:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 35px rgba(245, 158, 11, 0.6) !important;
+}
+
+/* Force apply card styles - more vibrant */
+.test-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 1.5rem !important;
+  padding: 2rem !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+}
+
+.test-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Force apply icon styles - more vibrant */
+.test-icon-blue {
+  color: #0ea5e9 !important;
+  filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.5)) !important;
+}
+
+.test-icon-green {
+  color: #10b981 !important;
+  filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.5)) !important;
+}
+
+.test-icon-pink {
+  color: #ec4899 !important;
+  filter: drop-shadow(0 4px 8px rgba(236, 72, 153, 0.5)) !important;
+}
+
+/* Medical Theme Enhancements */
+.medical-hero-icon {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+  border: 3px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.4s ease !important;
+}
+
+.medical-hero-icon:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+}
+
+.medical-title {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.8)) !important;
+}
+
+.medical-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.medical-disclaimer {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+  border: 2px solid #f59e0b !important;
+  color: #92400e !important;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Override any conflicting styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure animations work */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out !important;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 199 89% 48%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .medical-gradient {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0fdfa 100%);
+  }
+  
+  .keyword-highlight {
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+    color: #be185d;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(236, 72, 153, 0.2);
+  }
+  
+  .confidence-bar {
+    background: rgba(226, 232, 240, 0.8);
+    border-radius: 9999px;
+    height: 0.75rem;
+    overflow: hidden;
+  }
+  
+  .confidence-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #14b8a6 0%, #0ea5e9 100%);
+    transition: all 0.5s ease-out;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+  }
+}
